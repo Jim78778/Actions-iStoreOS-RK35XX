@@ -6,6 +6,12 @@
 # Author: P3TERX
 # Blog: https://p3terx.com
 #===============================================
+# 修复 lrzsz automake 版本问题
+if [ -d package/feeds/packages/lrzsz ]; then
+  cd package/feeds/packages/lrzsz
+  autoreconf -fi
+  cd -
+fi
 
 # enable rk3568 model adc keys
 cp -f $GITHUB_WORKSPACE/configfiles/adc-keys.txt adc-keys.txt
